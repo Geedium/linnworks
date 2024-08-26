@@ -1,0 +1,12 @@
+{
+    "name": "linnworks-sdk",
+    "dependencies": {
+        "express": "^4.19.2"
+    },
+    "peerDependencies": {
+        "express": "^4.19.2"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.4"
+    }
+}

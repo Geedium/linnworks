@@ -6,9 +6,10 @@
         "url": "https://github.com/Militar-1/linnworks-sdk.git"
     },
     "type": "module",
+    "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc && rollup -c"
+        "build": "tsc && tsc -p types/tsconfig.json && rollup -c"
     },
     "files": [
         "dist/**/*",

@@ -1,8 +1,17 @@
 {
-    "name": "linnworks-sdk",
+    "name": "@militar-1/linnworks-sdk",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Militar-1/linnworks-sdk.git"
+    },
     "dependencies": {
         "express": "^4.19.2"
     },
+    "types": "./linnworks.d.ts",
+    "files": [
+        "dist/**/*",
+        "linnworks.d.ts"
+    ],
     "peerDependencies": {
         "express": "^4.19.2"
     },

@@ -1,11 +1,9 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "declaration": true,     // Generate .d.ts files
-    "outDir": "./dist",      // Output directory for compiled files
-    "strict": true,
-    "esModuleInterop": true
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./build"
   },
   "include": ["src/**/*"]
 }

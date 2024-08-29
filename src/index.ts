@@ -1,1 +1,2 @@
-export * as Linnworks from "./types";
+export * from "./GenericResponse";
+export * from "./AddNewUserRequest";

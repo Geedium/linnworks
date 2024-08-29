@@ -1,3 +1,9 @@
+/**
+ * Linnworks Typescript SDK
+ * 
+ * @packageDocumentation
+ */
+
 export * from './utils';
 export * from './AddNewUser';
 export * from './CancelLabel';

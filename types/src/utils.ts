@@ -15,7 +15,15 @@ export type GenericValue = {
 }
 
 export type GenericResponse = {
+    /**
+     * Error string if there was an issue with the call.
+     * 
+     * `null` or `Empty` string are valid when no error
+     */
     ErrorMessage: string | null;
+    /**
+     * Indicates if there is an error
+     */
     IsError: boolean;
 }
 

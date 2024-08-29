@@ -12,7 +12,15 @@ type GenericValue = {
     Value: string;
 };
 type GenericResponse = {
+    /**
+     * Error string if there was an issue with the call.
+     *
+     * `null` or `Empty` string are valid when no error
+     */
     ErrorMessage: string | null;
+    /**
+     * Indicates if there is an error
+     */
     IsError: boolean;
 };
 type ListValue = GenericValue;
@@ -24,11 +32,27 @@ type Only<T, U> = {
 type Either<T, U> = Only<T, U> | Only<U, T>;
 
 interface AddNewUserRequest {
+    /**
+     * Unique identifer of the Linnworks customer's account.
+     * Will never change.
+     */
     LinnworksUniqueIdentifier: string;
+    /**
+     * Email of the customer, subject to change.
+     */
     Email: string;
+    /**
+     * Account name being integrated into the system.
+     * Will never change and on integration it is suggest that duplicates are checked for. Nb.
+     * Customers may expect to have multiple integrations of the same channel in Linnworks.
+     */
     AccountName: string;
 }
 interface AddNewUserResponse extends GenericResponse {
+    /**
+     * If successful the authorization token string of the customer.
+     * This will be used for all subsequent calls.
+     */
     AuthorizationToken: string;
 }
 
@@ -259,14 +283,38 @@ type UserConfigRequest = Either<{
     ConfigStatus: string;
     ConfigItems: ConfigItemValue[];
 }, {
+    /**
+     * Token that you generated for this customer.
+     */
     AuthorizationToken: string;
 }>;
 type UserConfigResponse = {
+    /**
+     * Identifies whether the integration profile is in Active mode.
+     * Meaning the customer completed the integration wizard
+     * and can use the integration.
+     */
     IsConfigActive: boolean;
+    /**
+     * Configuration stage name.
+     * You must provide the same name to the `UpdateConfig` endpoint.
+     */
     ConfigStatus: string;
+    /**
+     * Config stage class.
+     */
     ConfigStage: ConfigStage;
+    /**
+     * 	Description of the current wizard step.
+     */
     WizardStepDescription: string;
+    /**
+     * Indicates if there is an error
+     */
     IsError: boolean;
+    /**
+     * Error message
+     */
     ErrorMessage: string | null;
 } | GenericResponse;
 

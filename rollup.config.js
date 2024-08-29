@@ -1,10 +1,11 @@
-import dts from 'rollup-plugin-dts';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
-  input: './types/dist/index.d.ts',
+  input: './src/index.ts',
   output: {
-    file: './dist/index.d.ts',
+    dir: 'dist',
     format: 'es',
+    entryFileNames: '[name].js',
   },
-  plugins: [dts()],
+  plugins: [typescript()],
 };

@@ -193,6 +193,14 @@ interface GenerateLabelResponse extends GenericResponse {
 }
 type GenerateLabelResult = GenerateLabelResponse | Package;
 
+interface PrintManifestRequest {
+    AuthorizationToken: string;
+    ManifestReference: string;
+}
+interface PrintManifestResponse extends GenericResponse {
+    PDFbase64: string;
+}
+
 interface QuoteItem {
     ServiceName: string;
     ServiceCode: string;
@@ -260,4 +268,4 @@ type UserConfigResponse = {
     ErrorMessage: string | null;
 } | GenericResponse;
 
-export { type AddNewUserRequest, type AddNewUserResponse, type CancelLabelRequest, type CancelLabelResponse, type Config, type ConfigItem, type ConfigItemValue, type ConfigListItem, type ConfigStage, type CourierService, type CreateManifestRequest, type CreateManifestResponse, type DeleteConfigRequest, type DeleteConfigResponse, type Either, type ExtPropertyMapRequest, type ExtendedProperty, type ExtendedPropertyMapResponse, type ExtendedPropertyMapping, type GenerateLabelRequest, type GenerateLabelResponse, type GenerateLabelResult, type GenericResponse, type GenericValue, type Item, type ListValue, type Only, type OrderExtendedProperties, type Package, type PackageFormat, type QuoteItem, type QuoteProperty, type QuoteRequest, type QuoteResponse, type QuoteServiceOption, type SaveConfigItem, type ServiceProperty, type UserAvailableServicesResponse, type UserConfigRequest, type UserConfigResponse, ValueType };
+export { type AddNewUserRequest, type AddNewUserResponse, type CancelLabelRequest, type CancelLabelResponse, type Config, type ConfigItem, type ConfigItemValue, type ConfigListItem, type ConfigStage, type CourierService, type CreateManifestRequest, type CreateManifestResponse, type DeleteConfigRequest, type DeleteConfigResponse, type Either, type ExtPropertyMapRequest, type ExtendedProperty, type ExtendedPropertyMapResponse, type ExtendedPropertyMapping, type GenerateLabelRequest, type GenerateLabelResponse, type GenerateLabelResult, type GenericResponse, type GenericValue, type Item, type ListValue, type Only, type OrderExtendedProperties, type Package, type PackageFormat, type PrintManifestRequest, type PrintManifestResponse, type QuoteItem, type QuoteProperty, type QuoteRequest, type QuoteResponse, type QuoteServiceOption, type SaveConfigItem, type ServiceProperty, type UserAvailableServicesResponse, type UserConfigRequest, type UserConfigResponse, ValueType };

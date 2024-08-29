@@ -11,6 +11,7 @@ export * from './GenerateLabel';
 export * from './Item';
 export * from './OrderExtendedProperties';
 export * from './Package';
+export * from './PrintManifest';
 export * from './Quote';
 export * from './SaveConfigItem';
 export * from './ServiceProperty';

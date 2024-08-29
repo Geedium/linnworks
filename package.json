@@ -9,15 +9,16 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc && tsc -p types/tsconfig.json && rollup -c"
+        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.js && rollup -c types/rollup.config.js"
     },
     "files": [
-        "dist/**/*",
-        "types/dist/**/*"
+        "dist/**/*"
     ],
     "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.6",
         "rollup": "^4.21.1",
         "rollup-plugin-dts": "^6.1.1",
+        "tslib": "^2.7.0",
         "typescript": "^5.5.4"
     }
 }

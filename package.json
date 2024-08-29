@@ -1,0 +1,22 @@
+{
+    "name": "@militar-1/linnworks-sdk",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Militar-1/linnworks-sdk.git"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsc && rollup -c"
+    },
+    "files": [
+        "dist/**/*",
+        "types/dist/**/*"
+    ],
+    "devDependencies": {
+        "rollup": "^4.21.1",
+        "rollup-plugin-dts": "^6.1.1",
+        "typescript": "^5.5.4"
+    }
+}

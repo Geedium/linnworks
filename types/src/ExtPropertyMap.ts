@@ -14,3 +14,7 @@ export interface ExtendedPropertyMapResponse {
     IsError: boolean;
     ErrorMessage: string | null;
 }
+
+export type ExtendedPropertyMappingResult =
+    ExtendedPropertyMapResponse |
+    ExtendedPropertyMapping;

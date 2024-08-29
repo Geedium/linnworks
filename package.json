@@ -9,7 +9,7 @@
     "module": "dist/index.esm.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.js && rollup -c types/rollup.config.js"
+        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.mjs && rollup -c types/rollup.config.mjs"
     },
     "files": [
         "dist/**/*"

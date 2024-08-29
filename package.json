@@ -5,8 +5,8 @@
         "type": "git",
         "url": "https://github.com/Militar-1/linnworks-sdk.git"
     },
-    "type": "module",
-    "main": "./dist/index.js",
+    "main": "./dist/index.cjs.js",
+    "module": "dist/index.esm.js",
     "types": "./dist/index.d.ts",
     "scripts": {
         "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.js && rollup -c types/rollup.config.js"
@@ -15,6 +15,8 @@
         "dist/**/*"
     ],
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^26.0.1",
+        "@rollup/plugin-node-resolve": "^15.2.3",
         "@rollup/plugin-typescript": "^11.1.6",
         "rollup": "^4.21.1",
         "rollup-plugin-dts": "^6.1.1",

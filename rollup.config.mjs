@@ -1,8 +1,23 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import terser from "@rollup/plugin-terser";
+import json from "@rollup/plugin-json";
 
-export default {
+import bundleSize from 'rollup-plugin-bundle-size';
+import dts from "rollup-plugin-dts";
+
+export default [{
+  input: './types/dist/index.d.ts',
+  output: {
+    file: 'dist/index.d.ts',
+    format: 'es',
+  },
+  plugins: [
+    dts(),
+    bundleSize(),
+  ],
+}, {
   input: './src/index.ts',
   output: [
     {
@@ -15,8 +30,13 @@ export default {
     }
   ],
   plugins: [
-    resolve(),  // Resolves node_modules
-    commonjs(), // Converts CommonJS to ES6
-    typescript() // Handles TypeScript
+    resolve(),
+    commonjs(),
+    json(),
+    typescript(),
+    terser({
+      keep_fnames: true,
+    }),
+    bundleSize(),
   ],
-};
+}];

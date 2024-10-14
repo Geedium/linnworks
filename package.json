@@ -9,18 +9,27 @@
     "module": "dist/index.esm.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.mjs && rollup -c types/rollup.config.mjs"
+        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.mjs"
     },
     "files": [
         "dist/**/*"
     ],
     "devDependencies": {
         "@rollup/plugin-commonjs": "^26.0.1",
+        "@rollup/plugin-json": "^6.1.0",
         "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^11.1.6",
+        "@types/node": "^22.7.5",
+        "@types/uuid": "^10.0.0",
         "rollup": "^4.21.1",
+        "rollup-plugin-bundle-size": "^1.0.3",
         "rollup-plugin-dts": "^6.1.1",
         "tslib": "^2.7.0",
         "typescript": "^5.5.4"
+    },
+    "peerDependencies": {},
+    "dependencies": {
+        "axios": "^1.7.7"
     }
 }

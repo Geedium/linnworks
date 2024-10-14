@@ -1,6 +1,6 @@
 Linnworks Node.js SDK
 ---
-The Linnworks Node.js SDK is here to make connecting with the Linnworks platform super easy for Node.js developers. While Linnworks already has a .NET SDK, this Node.js version lets you handle e-commerce tasks like managing orders, inventory, and shipping without any hassle. It provides simple access to various Linnworks APIs, making it a breeze to integrate with your apps and keep everything running smoothly. Whether you want to automate processes, sync data, or fine-tune your setup, this SDK has the tools you need to get the job done.
+The Linnworks Node.js SDK is here to make connecting with the Linnworks platform super easy for Node.js developers.
 
 Integrations
 ---

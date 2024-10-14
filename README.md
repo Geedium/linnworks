@@ -2,6 +2,12 @@ Linnworks Node.js SDK
 ---
 The Linnworks Node.js SDK is here to make connecting with the Linnworks platform super easy for Node.js developers.
 
+Installiation
+---
+```bash
+yarn add @geedium/linnworks
+```
+
 Integrations
 ---
 | Integration                  | Implemented |

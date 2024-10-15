@@ -1,6 +1,6 @@
 {
     "name": "@geedium/linnworks",
-    "version": "1.0.0-dev-21CVAgC5q",
+    "version": "1.0.0-dev-G6KcswvPw",
     "repository": {
         "type": "git",
         "url": "https://github.com/Geedium/linnworks.git"
@@ -15,7 +15,8 @@
     "module": "dist/index.esm.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.mjs"
+        "build": "tsc -p types/tsconfig.json && rollup -c rollup.config.mjs",
+        "publish": "yarn build && npm publish --access public"
     },
     "files": [
         "dist/**/*"

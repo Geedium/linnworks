@@ -38,7 +38,7 @@ export class Dashboards extends LinnworksBase {
 
     reinvalidateClient() {
         this.axiosClient.defaults.baseURL = this.sessionServer + "/api/Dashboards";
-        this.axiosClient.defaults.headers.Authorization = "Bearer " + this.sessionToken;    
+        this.axiosClient.defaults.headers.Authorization = this.sessionToken;    
     }
 
     /**

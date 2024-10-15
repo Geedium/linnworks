@@ -52,3 +52,24 @@ v2
 | API                    | Implemented |
 |:-----------------------|:------------|
 | **Warehouse Transfer** | ✗           |
+
+Quick Start
+---
+```ts
+import { Linnworks } from '@geedium/linnworks';
+
+const client = new Linnworks({
+    applicationId: "<your_application_id>",
+    applicationSecret: "<your_application_secret>",
+    installiationToken: "<your_installation_token>",
+    version: "v1"
+});
+
+await client.v1.authenticate.authorizeByApplication();
+
+const topProducts = await client.v1.dashboards.getPerformanceTableData({
+    period: 1,
+});
+
+console.log(topProducts);
+```

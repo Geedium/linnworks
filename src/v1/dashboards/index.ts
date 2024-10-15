@@ -28,7 +28,7 @@ export class Dashboards extends LinnworksBase {
         this.axiosClient = axios.create({
             baseURL: this.sessionServer + "/api/Dashboards",
             headers: {
-                Authorization: "Bearer " + this.sessionToken,
+                Authorization: this.sessionToken,
             },
         });
         axiosRetry(this.axiosClient, {

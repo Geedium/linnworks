@@ -3,7 +3,7 @@ import { ApiOptions } from "./types";
 import LinnworksApi from "./v1/index";
 import LinnworksApi2 from "./v2/index";
 
-export default class Linnworks {
+export class Linnworks {
     public readonly api: LinnworksBase;
 
     constructor(options: ApiOptions) {
@@ -15,5 +15,13 @@ export default class Linnworks {
                 default: throw new Error(`API version ${version} not supported.`);
             }
         })();
+    }
+
+    get v1() {
+        return this.api as LinnworksApi;
+    }
+
+    get v2() {
+        return this.api as LinnworksApi2;
     }
 }

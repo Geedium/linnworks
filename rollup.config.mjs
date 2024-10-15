@@ -31,7 +31,9 @@ export default [{
   ],
   plugins: [
     resolve(),
-    commonjs(),
+    commonjs({
+      esmExternals: true
+    }),
     json(),
     typescript(),
     terser({

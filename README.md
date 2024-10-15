@@ -21,7 +21,7 @@ v1
 | API                                        | Implemented |
 |:-------------------------------------------|:------------|
 | **Authenticate API**                       | ✔           |
-| **Dashboards API**                         | ✗           |
+| **Dashboards API**                         | ✔           |
 | **Email API**                              | ✗           |
 | **Generic Listings API**                   | ✗           |
 | **Import and Export API**                  | ✗           |

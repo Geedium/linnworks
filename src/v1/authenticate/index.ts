@@ -67,6 +67,7 @@ export class Authenticate extends LinnworksBase {
             Token: this.token,
         });
         this.session = data;
+        this.setSession(this.session);
         if (!this.session) {
             return null;
         }

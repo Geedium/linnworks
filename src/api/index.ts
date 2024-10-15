@@ -7,9 +7,6 @@ export default class LinnworksBase {
     constructor(_options: ApiOptions) {}
 
     protected getSession() {
-        if (!LinnworksBase.session) {
-            throw new Error("Session must be set.");
-        }
         return LinnworksBase.session;
     }
 

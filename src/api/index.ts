@@ -14,6 +14,14 @@ export default class LinnworksBase {
         LinnworksBase.session = session;
     }
 
+    get sessionServer() {
+        const session = LinnworksBase.session;
+        if (!session || !session.Server) {
+            return "";
+        }
+        return session.Server;
+    }
+
     get sessionToken() {
         const session = LinnworksBase.session;
         if (!session || !session.Token) {

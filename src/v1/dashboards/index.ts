@@ -26,7 +26,7 @@ export class Dashboards extends LinnworksBase {
     constructor(options: ApiOptions) {
         super(options);
         this.axiosClient = axios.create({
-            baseURL: this.getSession().Server + "/Dashboards",
+            baseURL: this.sessionServer + "/Dashboards",
             headers: {
                 Authorization: "Bearer " + this.sessionToken,
             },
@@ -34,6 +34,11 @@ export class Dashboards extends LinnworksBase {
         axiosRetry(this.axiosClient, {
             retries: 3,
         });
+    }
+
+    reinvalidateClient() {
+        this.axiosClient.defaults.baseURL = this.sessionServer + "/Dashboards";
+        this.axiosClient.defaults.headers.Authorization = "Bearer " + this.sessionToken;    
     }
 
     /**
@@ -44,6 +49,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<LowStockLevel[]>(
             "GetLowStockLevel", {
             params: options,
@@ -59,6 +65,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<PerformanceTable[]>(
             "GetPerformanceTableData", {
             params: options,
@@ -74,6 +81,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<GetPerformanceDetail>(
             "GetPerformanceDetail", {
             params: options,
@@ -89,6 +97,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<TopOrderedProduct[]>(
             "GetTopProducts", {
             params: options
@@ -104,6 +113,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<InventoryLocationData[]>(
             "GetInventoryLocationData", {
             params: options
@@ -119,6 +129,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<InventoryLocationCategoriesData[]>(
             "GetInventoryLocationCategoriesData", {
             params: options
@@ -134,6 +145,7 @@ export class Dashboards extends LinnworksBase {
         if (!this.axiosClient) {
             throw new Error("No http (axios) client instance found.");
         }
+        this.reinvalidateClient();
         const { data } = await this.axiosClient.get<InventoryLocationProductsData>(
             "GetInventoryLocationProductsData", {
             params: options

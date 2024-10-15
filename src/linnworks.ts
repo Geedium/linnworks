@@ -3,6 +3,9 @@ import { ApiOptions } from "./types";
 import LinnworksApi from "./v1/index";
 import LinnworksApi2 from "./v2/index";
 
+export { Authenticate } from "./v1/authenticate";
+export { Dashboards } from "./v1/dashboards";
+
 export class Linnworks {
     public readonly api: LinnworksBase;
 

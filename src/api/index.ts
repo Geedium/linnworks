@@ -18,8 +18,8 @@ export default class LinnworksBase {
     }
 
     get sessionToken() {
-        const session = this.getSession();
-        if (!session.Token) {
+        const session = LinnworksBase.session;
+        if (!session || !session.Token) {
             return "";
         }
         return session.Token?.replace(/-/g, '');

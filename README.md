@@ -2,19 +2,53 @@ Linnworks Node.js SDK
 ---
 The Linnworks Node.js SDK is here to make connecting with the Linnworks platform super easy for Node.js developers.
 
-Installiation
+⚙️ Installiation
 ---
 ```bash
 yarn add @geedium/linnworks
 ```
+You can use your preferred package manager `yarn` is just an example. 
 
-Integrations
+🚀 Quick Start
 ---
+```ts
+import { Linnworks } from '@geedium/linnworks';
+
+const client = new Linnworks({
+    applicationId: "<your_application_id>",
+    applicationSecret: "<your_application_secret>",
+    installiationToken: "<your_installation_token>",
+    version: "v1"
+});
+
+await client.v1.authenticate.authorizeByApplication();
+
+const topProducts = await client.v1.dashboards.getPerformanceTableData({
+    period: 1,
+});
+
+console.log(topProducts);
+```
+
+🪢 Integrations
+---
+
 | Integration                  | Implemented |
 |:-----------------------------|:------------|
 | **Channel integration**      | ✔           |
-| **Accounting integration**   | ✗           |
 | **Shipping integration**     | ✔           |
+
+This package only includes **types** and **utilities** for the integrations.  
+You must deploy your own application server and host it with your chosen service.  
+You can obtain your application `id`, `secret`, and `token` from the [Linnworks Developer Portal](https://developer.linnworks.com/).
+
+> [!Tip]
+> You can import the integration and access all its exported types.
+> ```ts
+> import { Linnworks, Channel } from '@geedium/linnworks';
+>
+> const var: Channel.ExpectedType = Channel.ExpectedType.STRING;
+> ```
 
 v1
 ---
@@ -52,31 +86,3 @@ v2
 | API                    | Implemented |
 |:-----------------------|:------------|
 | **Warehouse Transfer** | ✗           |
-
-Quick Start
----
-```ts
-import { Linnworks } from '@geedium/linnworks';
-
-const client = new Linnworks({
-    applicationId: "<your_application_id>",
-    applicationSecret: "<your_application_secret>",
-    installiationToken: "<your_installation_token>",
-    version: "v1"
-});
-
-await client.v1.authenticate.authorizeByApplication();
-
-const topProducts = await client.v1.dashboards.getPerformanceTableData({
-    period: 1,
-});
-
-console.log(topProducts);
-```
-Using types for integrations
----
-```ts
-import { Linnworks, Channel } from '@geedium/linnworks';
-
-const var: Channel.ExpectedType = Channel.ExpectedType.STRING;
-```

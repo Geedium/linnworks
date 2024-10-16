@@ -73,3 +73,10 @@ const topProducts = await client.v1.dashboards.getPerformanceTableData({
 
 console.log(topProducts);
 ```
+Using types for integrations
+---
+```ts
+import { Linnworks, Channel } from '@geedium/linnworks';
+
+const var: Channel.ExpectedType = Channel.ExpectedType.STRING;
+```

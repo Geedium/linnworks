@@ -9,7 +9,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "removeComments": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "types/*": ["./types/src/*"]
+    }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "types/src/**/*"],
 }

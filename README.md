@@ -12,7 +12,7 @@ Integrations
 ---
 | Integration                  | Implemented |
 |:-----------------------------|:------------|
-| **Channel integration**      | ✗           |
+| **Channel integration**      | ✔           |
 | **Accounting integration**   | ✗           |
 | **Shipping integration**     | ✔           |
 

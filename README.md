@@ -35,8 +35,8 @@ console.log(topProducts);
 
 | Integration                  | Implemented |
 |:-----------------------------|:------------|
-| **Channel integration**      | ✔           |
-| **Shipping integration**     | ✔           |
+| **Channel integration**      | ✔ `Channel` |
+| **Shipping integration**     | ✔ `<Root>`  |
 
 This package only includes **types** and **utilities** for the integrations.  
 You must deploy your own application server and host it with your chosen service.  
@@ -54,9 +54,9 @@ v1
 ---
 | API                                        | Implemented |
 |:-------------------------------------------|:------------|
-| **Authenticate API**                       | ✔           |
-| **Dashboards API**                         | ✔           |
-| **Email API**                              | ✔           |
+| **Authenticate API**                       | ✔ Auth `authenticate`  |
+| **Dashboards API**                         | ✔ Dashboards `dashboards` |
+| **Email API**                              | ✔ Email `email` |
 | **Generic Listings API**                   | ✗           |
 | **Import and Export API**                  | ✗           |
 | **Listings API**                           | ✗           |
@@ -76,7 +76,7 @@ v1
 | **ShipStation API**                        | ✗           |
 | **Stock API**                              | ✗           |
 | **Warehouse Transfer (Legacy) API**        | ✗           |
-| **Warehouse Transfer API**                 | ✗           |
+| **Warehouse Transfer API**                 | ✗ FbaShipment<br>✗ FbaShipmentBox<br>✗ FbaShipmentBoxItem<br>✗ FbaShipmentFeed<br>✗ FbaShipmentItem<br>✗ FbaShipmentItemBatch<br>✗ FbaShipmentPallet<br>✗ FbaShipmentTransport<br>✗ FbaShipmentTransportDetail<br>✗ FbaShippingLocation<br>✗ FbaShippingPlan<br>✗ FbaStockItemBatch<br>✗ FbaTransferCards<br>✗ Import<br>✗ StockItem<br>✗ WarehouseTransfer |
 | **WMS API**                                | ✗           |
 | **Shipping service API**                   | ✗           |
 | **Inventory API**                          | ✗           |

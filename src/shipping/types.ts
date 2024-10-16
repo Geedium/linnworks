@@ -270,7 +270,7 @@ export interface PackageLabel {
     /** Package sequence number. Must match what is in the request */
     SequenceNumber: number;
     /** Package tracking number */
-    TrackingNumber: number;
+    TrackingNumber: string;
     /** Base64 PNG label */
     PNGLabelDataBase64: string;
     /** Additional Base64 PNG documents */

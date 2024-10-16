@@ -22,7 +22,7 @@ v1
 |:-------------------------------------------|:------------|
 | **Authenticate API**                       | ✔           |
 | **Dashboards API**                         | ✔           |
-| **Email API**                              | ✗           |
+| **Email API**                              | ✔           |
 | **Generic Listings API**                   | ✗           |
 | **Import and Export API**                  | ✗           |
 | **Listings API**                           | ✗           |

@@ -1,15 +1,17 @@
 {
     "name": "@geedium/linnworks",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/Geedium/linnworks.git"
     },
     "keywords": [
         "nodejs",
-        "typescript",
         "sdk",
-        "rollup"
+        "rollup",
+        "axios",
+        "strongly-typed",
+        "linnworks"
     ],
     "main": "./dist/index.cjs.js",
     "module": "dist/index.esm.js",

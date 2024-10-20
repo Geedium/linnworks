@@ -14,16 +14,16 @@ You can use your preferred package manager `yarn` is just an example.
 ```ts
 import { Linnworks } from '@geedium/linnworks';
 
-const client = new Linnworks({
+const client = Linnworks({
     applicationId: "<your_application_id>",
     applicationSecret: "<your_application_secret>",
     installiationToken: "<your_installation_token>",
-    version: "v1"
+    version: "v1",
 });
 
-await client.v1.authenticate.authorizeByApplication();
+await client.auth.authorizeByApplication();
 
-const topProducts = await client.v1.dashboards.getPerformanceTableData({
+const topProducts = await client.dashboards.getPerformanceTableData({
     period: 1,
 });
 
@@ -54,10 +54,10 @@ v1
 ---
 | API                                        | Implemented |
 |:-------------------------------------------|:------------|
-| **Authenticate API**                       | ✔ Auth `authenticate`  |
+| **Authenticate API**                       | ✔ Auth `auth`  |
 | **Dashboards API**                         | ✔ Dashboards `dashboards` |
 | **Email API**                              | ✔ Email `email` |
-| **Generic Listings API**                   | ✗           |
+| **Generic Listings API**                   | ✔ GenericListings `genericListings` |
 | **Import and Export API**                  | ✗           |
 | **Listings API**                           | ✗           |
 | **Locations API**                          | ✗           |
@@ -78,7 +78,7 @@ v1
 | **Warehouse Transfer (Legacy) API**        | ✗           |
 | **Warehouse Transfer API**                 | ✗ FbaShipment<br>✗ FbaShipmentBox<br>✗ FbaShipmentBoxItem<br>✗ FbaShipmentFeed<br>✗ FbaShipmentItem<br>✗ FbaShipmentItemBatch<br>✗ FbaShipmentPallet<br>✗ FbaShipmentTransport<br>✗ FbaShipmentTransportDetail<br>✗ FbaShippingLocation<br>✗ FbaShippingPlan<br>✗ FbaStockItemBatch<br>✗ FbaTransferCards<br>✗ Import<br>✗ StockItem<br>✗ WarehouseTransfer |
 | **WMS API**                                | ✗           |
-| **Shipping service API**                   | ✗           |
+| **Shipping service API**                   | ✗ ShippingService `shippingService` |
 | **Inventory API**                          | ✗           |
 
 v2
